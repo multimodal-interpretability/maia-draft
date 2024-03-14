@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="A Multimodal Automated Interpretability Agent">
+  <meta name="keywords" content="Interpretability, LLMs, Multimodal, Vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Multimodal Automated Interpretability Agent</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">A Multimodal Automated Interpretability Agent</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://tamarott.github.io/">Tamar Rott Shaham*</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://cogconfluence.com">Sarah Schwettmann*</a><sup>1*</sup>,</span>
+		        <br>
+            <span class="author-block">
+              <a href="https://frankxwang.github.io/">Franklin Wang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://twitter.com/AchyutaBot">Achyuta Rajaram</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://evandez.com/">Evan Hernandez</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.mit.edu/~jda/">Jacob Andreas</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba</a><sup>1</sup>
+            </span>
+          </div>
+		
+	  * indicates equal contribution.
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>MIT CSAIL</span>
+          </div> 
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2309.03886.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+		<a href="https://arxiv.org/abs/2309.03886"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+             	 </a>   
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+              	<a href="https://github.com/multimodal-interpretability/FIND" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+              	</a>  
+              </span>
+            
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+		
+<section class="hero teaser" style="margin-top: -5px;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="./static/figures/FIND_AIA_gif.gif" style="width: 75%; height: auto;" />
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Labeling neural network submodules with human-legible descriptions is useful for many downstream tasks: such descriptions can surface failures, guide interventions, and perhaps even explain important model behaviors. To date, most mechanistic descriptions of trained networks have involved small models, narrowly delimited phenomena, and large amounts of human labor. Labeling all human-interpretable sub-computations in models of increasing size and complexity will almost certainly require tools that can generate and validate descriptions automatically. Recently, techniques that use learned models in-the-loop for labeling have begun to gain traction, but methods for evaluating their efficacy are limited and ad-hoc. How should we validate and compare open-ended labeling tools? This paper introduces <b>FIND</b> (<b>F</b>unction <b>IN</b>terpretation and <b>D</b>escription), a benchmark suite for evaluating the building blocks of automated interpretability methods. FIND contains functions that resemble components of trained neural networks, and accompanying descriptions of the kind we seek to generate. The functions are procedurally constructed across textual and numeric domains, and involve a range of real-world complexities, including noise, composition, approximation, and bias. We evaluate methods that use pretrained language models (LMs) to produce code-based and natural language descriptions of function behavior. Additionally, we introduce a new interactive method in which an <b>A</b>utomated <b>I</b>nterpretability <b>A</b>gent (<b>AIA</b>) generates function descriptions. We find that an AIA, built with an off-the-shelf LM augmented with black-box access to functions, can sometimes infer function structure, acting as a scientist by forming hypotheses, proposing experiments, and updating descriptions in light of new data. However, <b>FIND</b> also reveals that LM-based descriptions capture global function behavior while missing local details. These results suggest that FIND will be useful for characterizing the performance of more sophisticated interpretability methods before they are applied to real-world models.
+          </p>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <figure>
+            <img src="./static/figures/FIND_schematic.png" />
+            <figcaption style="font-size: 0.8em;"></figcaption>
+        </figure>
+    	<div class="content has-text-justified">
+        <p><b>FIND dataset and the Automated Interpretability Agent. </b>FIND is constructed procedurally: atomic functions are defined across domains
+including elementary numeric operations (purple), string operations (green), and synthetic neural modules that
+compute semantic similarity to reference entities (yellow) and implement real-world factual associations (blue).
+Complexity is introduced through composition, bias, approximation and noise. We provide an LM-based
+interpretation baseline that compares text and code interpretations to ground-truth function implementations.</p>
+        <hr>
+    </div>
+    </div>
+</div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Video</h3>
+        <div class="content has-text-justified">
+          <p>
+            <figure>
+              <iframe width="620" height="360" src="https://www.youtube.com/embed/X1yJAZMLJG8?si=l6LfplnvRGRXO0Wo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </figure>
+          </p>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="margin-top: -5px;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+	<h3 class="title is-4">AIA interpretations</h3>
+    </div>
+   </div>
+</section>
+
+<section class="section" style="margin-top: -5px;">
+  <div class="container is-max-desktop">
+    <h4 class="title is-4">Numeric functions</h4>
+   </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <figure>
+            <img src="./static/figures/math_examples.png" />
+            <figcaption style="font-size: 0.8em;"></figcaption>
+        </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="margin-top: -5px;">
+  <div class="container is-max-desktop">
+    <h4 class="title is-4">String functions</h4>
+   </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <figure>
+            <img src="./static/figures/strings_examples.png" />
+            <figcaption style="font-size: 0.8em;"></figcaption>
+        </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="margin-top: -5px;">
+  <div class="container is-max-desktop">
+    <h4 class="title is-4">Synthetic neurons</h4>
+   </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <figure>
+            <img src="./static/figures/synthetic_neurons.png" />
+            <figcaption style="font-size: 0.8em;"></figcaption>
+        </figure>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{schwettmann2023find,
+      title={FIND: A Function Description Benchmark for Evaluating Interpretability Methods},
+      author={Schwettmann, Sarah and Rott Shaham, Tamar and Materzynska, Joanna and Chowdhury, Neil and Li, Shuang and Andreas, Jacob and Bau, David and Torralba, Antonio},
+      booktitle={Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+      year={2023}
+    }
+    </code></pre>
+  </div>
+</section>
+
+	
+<footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content" style="text-align: center;">
+          <p>
+            This website is adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies template</a>, which you are free to borrow if you link back to it in the footer.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+	
+
+
+</body>
+</html>
