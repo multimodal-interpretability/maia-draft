@@ -115,11 +115,12 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">MAIA</h2>
         <div class="content has-text-justified">
           <p>
-          Labeling neural network submodules with human-legible descriptions is useful for many downstream tasks: such descriptions can surface failures, guide interventions, and perhaps even explain important model behaviors. To date, most mechanistic descriptions of trained networks have involved small models, narrowly delimited phenomena, and large amounts of human labor. Labeling all human-interpretable sub-computations in models of increasing size and complexity will almost certainly require tools that can generate and validate descriptions automatically. Recently, techniques that use learned models in-the-loop for labeling have begun to gain traction, but methods for evaluating their efficacy are limited and ad-hoc. How should we validate and compare open-ended labeling tools? This paper introduces <b>FIND</b> (<b>F</b>unction <b>IN</b>terpretation and <b>D</b>escription), a benchmark suite for evaluating the building blocks of automated interpretability methods. FIND contains functions that resemble components of trained neural networks, and accompanying descriptions of the kind we seek to generate. The functions are procedurally constructed across textual and numeric domains, and involve a range of real-world complexities, including noise, composition, approximation, and bias. We evaluate methods that use pretrained language models (LMs) to produce code-based and natural language descriptions of function behavior. Additionally, we introduce a new interactive method in which an <b>A</b>utomated <b>I</b>nterpretability <b>A</b>gent (<b>AIA</b>) generates function descriptions. We find that an AIA, built with an off-the-shelf LM augmented with black-box access to functions, can sometimes infer function structure, acting as a scientist by forming hypotheses, proposing experiments, and updating descriptions in light of new data. However, <b>FIND</b> also reveals that LM-based descriptions capture global function behavior while missing local details. These results suggest that FIND will be useful for characterizing the performance of more sophisticated interpretability methods before they are applied to real-world models.
-          </p>
+We describe MAIA, a Multimodal Automated Interpretability Agent. MAIA is a system that uses neural models to automate neural model understanding tasks like feature interpretation and failure mode discovery.
+It equips a pre-trained vision-language model with a set of tools that support iterative experimentation on subcomponents of other models to explain their behavior. These include tools commonly used by human interpretability researchers: for synthesizing and editing inputs, computing maximally activating exemplars from real-world datasets, and summarizing and describing experimental results. 
+<i>Interpretability experiments</i> proposed by MAIA compose these tools to describe and explain system behavior. </p>
           <hr>
         </div>
       </div>
@@ -128,7 +129,9 @@
   </div>
 </section>
 
-<section class="hero teaser">
+
+<!-- Example from a previous site of including and describing a figure: 	 -->
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
         <figure>
@@ -145,100 +148,22 @@ interpretation baseline that compares text and code interpretations to ground-tr
     </div>
     </div>
 </div>
-</section>
+</section> -->
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h3 class="title is-4">Video</h3>
-        <div class="content has-text-justified">
-          <p>
-            <figure>
-              <iframe width="620" height="360" src="https://www.youtube.com/embed/X1yJAZMLJG8?si=l6LfplnvRGRXO0Wo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </figure>
-          </p>
-          <hr>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="margin-top: -5px;">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-	<h3 class="title is-4">AIA interpretations</h3>
-    </div>
-   </div>
-</section>
-
-<section class="section" style="margin-top: -5px;">
-  <div class="container is-max-desktop">
-    <h4 class="title is-4">Numeric functions</h4>
-   </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-        <figure>
-            <img src="./static/figures/math_examples.png" />
-            <figcaption style="font-size: 0.8em;"></figcaption>
-        </figure>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="margin-top: -5px;">
-  <div class="container is-max-desktop">
-    <h4 class="title is-4">String functions</h4>
-   </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-        <figure>
-            <img src="./static/figures/strings_examples.png" />
-            <figcaption style="font-size: 0.8em;"></figcaption>
-        </figure>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="margin-top: -5px;">
-  <div class="container is-max-desktop">
-    <h4 class="title is-4">Synthetic neurons</h4>
-   </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-        <figure>
-            <img src="./static/figures/synthetic_neurons.png" />
-            <figcaption style="font-size: 0.8em;"></figcaption>
-        </figure>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section" id="BibTeX">
+<!-- 
+they will cite the arxiv?  -->
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{schwettmann2023find,
-      title={FIND: A Function Description Benchmark for Evaluating Interpretability Methods},
+    <pre><code>@inproceedings{%%%%,
+      title={A Multimodal Automated Interpretability Agent},
       author={Schwettmann, Sarah and Rott Shaham, Tamar and Materzynska, Joanna and Chowdhury, Neil and Li, Shuang and Andreas, Jacob and Bau, David and Torralba, Antonio},
       booktitle={Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
       year={2023}
     }
     </code></pre>
   </div>
-</section>
+</section> -->
 
 	
 <footer class="footer">
