@@ -17,6 +17,10 @@ body {
   font-variant: small-caps;
 }
 
+.container {
+  width: 95% !important;
+  max-width: none !important;
+}
 
 .teaser .hero-body {
   padding-top: 0;
@@ -71,7 +75,7 @@ body {
 }
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+   color: #E73973 !important;
 }
 
 .publication-authors a:hover {
@@ -86,7 +90,7 @@ body {
 }
 
 .publication-authors {
-  /*color: #4286f4;*/
+  /*color: #E73973;*/
 }
 
 .publication-video {
