@@ -153,17 +153,24 @@
       </div>
       
       <h3 class="subtitle is-5" style="text-align: left;">Visualizing Dataset Exemplars</h3>
-      <p>MAIA uses the <code>dataset_exemplars</code> tool to compute images from the ImageNet dataset that maixmally activate a given system (in this case, an individual neuron). The <code>dataset_exemplars</code> tool returns masked versions of the images highlighting <i>image subregions</i> that maximally activate the neuron, as well as the activation value.</p>
+      <p>MAIA uses the <code>dataset_exemplars</code> tool to compute images from the ImageNet dataset that maixmally activate a given system (in this case, an individual neuron). The <code>dataset_exemplars</code> tool returns masked versions of the images highlighting <i>image subregions</i> that maximally activate the neuron, as well as the activation value.</p><br>
       
       <div style="display: flex; justify-content: center; width: 100%;">
         <img src="./static/figures/dataset_exemplars_gif.gif" alt="Dataset Exemplars" style="width: 95%; height: auto;" />
       </div>
       
       <h3 class="subtitle is-5" style="text-align: left;">Generating Synthetic Test Images</h3>
-      <p>In addition to using real-world stimuli as inputs to the system it is trying to interpret, MAIA can generate additional synthetic inputs that test specific dimensions of a system's selectivity. MAIA uses the <code>text_to_image</code> function to call a pretrained text-guided diffusion model on prompts it writes. These prompts can test specific hypotheses about the neuron's selectivities, such as in the example of the tennis ball neuron below.</p>
+      <p>In addition to using real-world stimuli as inputs to the system it is trying to interpret, MAIA can generate additional synthetic inputs that test specific dimensions of a system's selectivity. MAIA uses the <code>text_to_image</code> function to call a pretrained text-guided diffusion model on prompts it writes. These prompts can test specific hypotheses about the neuron's selectivities, such as in the example of the tennis ball neuron below.</p><br>
 
       <div style="display: flex; justify-content: center; width: 100%; "margin-top: 5px;">
         <img src="./static/figures/synthetic_exemplars_gif.gif" alt="Synthetic Exemplars" style="width: 95%; height: auto;" />
+      </div>
+	    
+      <h3 class="subtitle is-5" style="text-align: left;">Image editing</h3>
+      <p>Maia can also call the <code>edit_images</code> tool which uses an text-based image editing module (Instruct Pix2Pix) to make image edits according to prompts written by MAIA. MAIA uses this tool to causally intervene on input space in order to test specific hypotheses about system behavior (e.g. whether the presence of a certain feature is required for the observed behavior!)</p><br>
+
+      <div style="display: flex; justify-content: center; width: 100%; "margin-top: 5px;">
+        <img src="./static/figures/editing_images_gif.gif" alt="Synthetic Exemplars" style="width: 95%; height: auto;" />
       </div>
 	    
     </div>
