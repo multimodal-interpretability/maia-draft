@@ -143,35 +143,29 @@
 </section>
 </section>
 
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-        <figure>
-            <img src="./static/figures/dataset_exemplars_gif.gif" />
-            <figcaption style="font-size: 0.8em;"></figcaption>
-        </figure>
-    	<div class="content has-text-justified">
-        <p><b>A caption?</p>
-        <hr>
-    </div>
-    </div>
-</div>
-</section> -->
 
 <section class="hero teaser" style="margin-top: -5px;">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <h2 class="title is-3 has-text-centered">MAIA Tool Use</h2>
+      <h2 class="title is-3 has-text-centered">MAIA Experiments</h2>
       <div class="content has-text-centered">
-        <p>MAIA employs a variety of tools to analyze and interpret neural networks, including feature visualization, attribution methods, and counterfactual explanations.</p>
+        <p>MAIA composes interpretability subroutines into python programs to answer user queries about a system. Below we highlight a few examples of MAIA using different tools from its API to run experiments on neurons inside common vision architectures (CLIP, ResNet, and DINO).</p>
       </div>
+      
+      <h3 class="subtitle is-5" style="text-align: left;">Visualizing Dataset Exemplars</h3>
+      <p>MAIA can retrieve dataset examples that maximally activate a given neuron, providing insights into its learned representations.</p>
+      
       <div style="display: flex; justify-content: center; width: 100%;">
-        <img src="./static/figures/dataset_exemplars_gif.gif" alt="MAIA Tool Use" />
+        <img src="./static/figures/dataset_exemplars_gif.gif" alt="Dataset Exemplars" style="width: 95%; height: auto;" />
       </div>
+      
+      <h3 class="subtitle is-5" style="text-align: left;">Generating Synthetic Test Images</h3>
+      <p>MAIA can generate synthetic inputs that maximize the activation of a specific neuron, revealing its preferred stimuli.</p>
     </div>
   </div>
 </section>
 
+	
 <!-- 
 they will cite the arxiv?  -->
 <!-- <section class="section" id="BibTeX">
