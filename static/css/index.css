@@ -17,11 +17,11 @@ body {
   font-variant: small-caps;
 }
 
-.container {
+/* .container {
   width: 95% !important;
   max-width: none !important;
 }
-
+ */
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
@@ -32,7 +32,7 @@ body {
 }
 
 .footer-link {
-  color: #E73973;
+  color: #FF9300;
 }
 
 
@@ -79,7 +79,7 @@ body {
 }
 
 .publication-authors a {
-   color: #E73973 !important;
+   color: #FF9300 !important;
 }
 
 .publication-authors a:hover {
