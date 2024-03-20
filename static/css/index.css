@@ -17,11 +17,11 @@ body {
   font-variant: small-caps;
 }
 
-/* .container {
+.container {
   width: 95% !important;
   max-width: none !important;
 }
- */
+
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
