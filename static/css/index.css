@@ -2,7 +2,34 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.container {
+  display: flex;
+}
 
+.sidebar {
+  width: 150px; /* Adjust the width as needed */
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
 .footer .icon-link {
     font-size: 25px;
     color: #000;
