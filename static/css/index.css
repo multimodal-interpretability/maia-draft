@@ -1,3 +1,9 @@
+body, .footer .icon-link, .link-block a, .dnerf, .teaser, .publication-title, .publication-authors, .publication-venue, .publication-awards, .publication-authors a, .info {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Rest of your CSS code remains the same */
+
 body {
   font-family: 'Noto Sans', sans-serif;
 }
