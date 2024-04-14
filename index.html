@@ -177,7 +177,7 @@
       </div>
 	    
       <h3 class="subtitle is-5" style="text-align: left;">Image editing</h3>
-      <p>Maia can also call the <code>edit_images</code> tool which uses an text-based image editing module (Instruct Pix2Pix) to make image edits according to prompts written by MAIA. MAIA uses this tool to causally intervene on input space in order to test specific hypotheses about system behavior (e.g. whether the presence of a certain feature is required for the observed behavior!)</p><br>
+      <p>MAIA can also call the <code>edit_images</code> tool which uses an text-based image editing module (Instruct Pix2Pix) to make image edits according to prompts written by MAIA. MAIA uses this tool to causally intervene on input space in order to test specific hypotheses about system behavior (e.g. whether the presence of a certain feature is required for the observed behavior!)</p><br>
 
       <div style="display: flex; justify-content: center; width: 100%; "margin-top: 5px;">
         <img src="./static/figures/editing_images_gif.gif" alt="Synthetic Exemplars" style="width: 95%; height: auto;" />
@@ -191,7 +191,19 @@
 <section class="hero teaser" style="margin-top: -5px;">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <h2 class="title is-3">MAIA uses tools to design experiments on other systems</h2>
+      <h2 class="title is-3">Using MAIA to remove spurious features</h2>
+      <div class="content" style="text-align: left;">
+        <p>MAIA composes interpretability subroutines into python programs to answer user queries about a system. What kind of experiments does MAIA design? Below we highlight example usage of individual tools to run experiments on neurons inside common vision architectures (CLIP, ResNet, DINO). These are experimental excerpts intended to demonstrate tool use (often, MAIA runs many more experiments to reach its final conclusion!) For full experiment logs, check out our interactive [neuron viewer]. </p>
+      </div>
+    </div>
+	  <hr>
+  </div>
+</section>
+
+<section class="hero teaser" style="margin-top: -5px;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Using MAIA to reveal biases</h2>
       <div class="content" style="text-align: left;">
         <p>MAIA composes interpretability subroutines into python programs to answer user queries about a system. What kind of experiments does MAIA design? Below we highlight example usage of individual tools to run experiments on neurons inside common vision architectures (CLIP, ResNet, DINO). These are experimental excerpts intended to demonstrate tool use (often, MAIA runs many more experiments to reach its final conclusion!) For full experiment logs, check out our interactive [neuron viewer]. </p>
       </div>
