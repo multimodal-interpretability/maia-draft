@@ -186,10 +186,10 @@
       <div class="content" style="text-align: justify;">
         <p>MAIA composes interpretability subroutines into python programs to answer user queries about a system. What kind of experiments does MAIA design? Below we highlight example usage of individual tools to run experiments on neurons inside common vision architectures (CLIP, ResNet, DINO). These are experimental excerpts intended to demonstrate tool use (often, MAIA runs many more experiments to reach its final conclusion!) For full experiment logs, check out our interactive [neuron viewer]. </p>
       </div>
-      
+      <div class="content" style="text-align: justify;">
       <h3 class="subtitle is-5" style="text-align: justify;">Visualizing Dataset Exemplars</h3>
       <p>MAIA uses the <code>dataset_exemplars</code> tool to compute images from the ImageNet dataset that maixmally activate a given system (in this case, an individual neuron). The <code>dataset_exemplars</code> tool returns masked versions of the images highlighting <i>image subregions</i> that maximally activate the neuron, as well as the activation value.</p><br>
-      
+      </div>
       <div style="display: flex; justify-content: center; width: 100%;">
         <img src="./static/figures/dataset_exemplars_gif.gif" alt="Dataset Exemplars" style="width: 95%; height: auto;" />
       </div>
@@ -223,13 +223,13 @@
       <div style="display: flex; justify-content: center; width: 100%; margin-bottom:-20px">
         <img src="./static/figures/spurious_example.gif" alt="spurious example" style="width: 95%; height: auto; margin-top: -15px; margin-bottom: 10px;" />
       </div>
-      <div class="content" style="text-align: justify;">
+      <div class="content" style="text-align: justify; margin-top:40px">
         <p>As well as another example neuron that MAIA determines to be selective for a single dog breed, independently of its background:</p>
       </div>
       <div style="display: flex; justify-content: center; width: 100%; margin-bottom:-20px">
         <img src="./static/figures/selective_example.gif" alt="spurious example" style="width: 95%; height: auto; margin-top: -15px; margin-bottom: 10px;" />
       </div>
-      <div class="content" style="text-align: justify; margin-top:10px; margin-bottom:-20px">
+      <div class="content" style="text-align: justify; margin-top:10px; margin-bottom:-40px">
         <p>We then use the features MAIA selects to train an unregularized logistic regression model on the unbalanced data. We find that with no access to unbiased examples, MAIA can identify and remove spurious features, improving model robustness under distribution shift by a wide margin, with an accuracy approaching that of fine-tuning on balanced data (see Section 5.1 of the paper for more results). </p>
       </div>	    
     </div>
