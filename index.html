@@ -227,7 +227,9 @@
         <p>As well as another example neuron that MAIA determines to be selective for a single dog breed, independently of its background:</p>
       </div>
       <div style="display: flex; justify-content: center; width: 100%; margin-top:-30px; margin-bottom:-20px">
-        <img src="./static/figures/selective_example.gif" alt="spurious example" style="width: 95%; height: auto; margin-top: -15px; margin-bottom: 10px;" />
+       <div style="width: 95%; height: auto; margin-top: -15px; margin-bottom: 10px; overflow: hidden;">
+         <img src="./static/figures/selective_example.gif" alt="spurious example" style="width: 100%; height: auto; object-fit: none; object-position: 0 10px;" />
+       </div> 
       </div>
       <div class="content" style="text-align: justify; margin-top:30px; margin-bottom:-30px">
         <p>We then use the features MAIA selects to train an unregularized logistic regression model on the unbalanced data. We find that with no access to unbiased examples, MAIA can identify and remove spurious features, improving model robustness under distribution shift by a wide margin, with an accuracy approaching that of fine-tuning on balanced data (see Section 5.1 of the paper for more results). </p>
