@@ -183,25 +183,25 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3">MAIA uses tools to design experiments on other systems</h2>
-      <div class="content" style="text-align: left;">
+      <div class="content" style="text-align: justify;">
         <p>MAIA composes interpretability subroutines into python programs to answer user queries about a system. What kind of experiments does MAIA design? Below we highlight example usage of individual tools to run experiments on neurons inside common vision architectures (CLIP, ResNet, DINO). These are experimental excerpts intended to demonstrate tool use (often, MAIA runs many more experiments to reach its final conclusion!) For full experiment logs, check out our interactive [neuron viewer]. </p>
       </div>
       
-      <h3 class="subtitle is-5" style="text-align: left;">Visualizing Dataset Exemplars</h3>
+      <h3 class="subtitle is-5" style="text-align: justify;">Visualizing Dataset Exemplars</h3>
       <p>MAIA uses the <code>dataset_exemplars</code> tool to compute images from the ImageNet dataset that maixmally activate a given system (in this case, an individual neuron). The <code>dataset_exemplars</code> tool returns masked versions of the images highlighting <i>image subregions</i> that maximally activate the neuron, as well as the activation value.</p><br>
       
       <div style="display: flex; justify-content: center; width: 100%;">
         <img src="./static/figures/dataset_exemplars_gif.gif" alt="Dataset Exemplars" style="width: 95%; height: auto;" />
       </div>
       
-      <h3 class="subtitle is-5" style="text-align: left;">Generating Synthetic Test Images</h3>
+      <h3 class="subtitle is-5" style="text-align: justify;">Generating Synthetic Test Images</h3>
       <p>In addition to using real-world stimuli as inputs to the system it is trying to interpret, MAIA can generate additional synthetic inputs that test specific dimensions of a system's selectivity. MAIA uses the <code>text2image</code> function to call a pretrained text-guided diffusion model on prompts it writes. These prompts can test specific hypotheses about the neuron's selectivities, such as in the example of the tennis ball neuron below.</p><br>
 
       <div style="display: flex; justify-content: center; width: 100%; "margin-top: 5px;">
         <img src="./static/figures/synthetic_exemplars_gif.gif" alt="Synthetic Exemplars" style="width: 95%; height: auto;" />
       </div>
 	    
-      <h3 class="subtitle is-5" style="text-align: left;">Image editing</h3>
+      <h3 class="subtitle is-5" style="text-align: justify;">Image editing</h3>
       <p>MAIA can also call the <code>edit_images</code> tool which uses an text-based image editing module (Instruct Pix2Pix) to make image edits according to prompts written by MAIA. MAIA uses this tool to causally intervene on input space in order to test specific hypotheses about system behavior (e.g. whether the presence of a certain feature is required for the observed behavior!)</p><br>
 
       <div style="display: flex; justify-content: center; width: 100%; "margin-top: 5px;">
@@ -217,7 +217,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3">Using MAIA to remove spurious features</h2>
-      <div class="content" style="text-align: justify;">
+      <div class="content" style="text-align: justify; margin-bottom: -20px;">
         <p>Learned spurious features impose a challenge when machine learning models are applied in real-world scenarios, where test distributions can differ from training set statistics. We use MAIA to identify and remove learned spurious features inside a classification network (ResNet-18 trained on <a href="https://arxiv.org/abs/2303.05470" target="_blank">Spawrious</a>, a synthetically generated dataset involving four dog breeds with different backgrounds). In the train set, each dog breed is spuriously correlated with a certain background (e.g. snow, jungle, desert, beach) while in the test set, the breed-background pairings are scrambled. We use MAIA to find a subset of final layer neurons that robustly predict a single dog breed independently of spurious features, simply by changing the query in the user prompt (see paper for more experimental details). Below, see an example neuron that MAIA determines to be selective for spurious correlations between dog breed and background:</p>
       </div>
       <div style="display: flex; justify-content: center; width: 100%;">
@@ -241,7 +241,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3">Using MAIA to reveal biases</h2>
-      <div class="content" style="text-align: left;">
+      <div class="content" style="text-align: justify;">
         <p>MAIA can also be applied to surface model-level biases. In a preliminary demonstration, we investigate biases in the outputs of an image classifier (ResNet-152) trained on a supervised ImageNet classification task. MAIA is easily adapted to this task by instrumenting an output logit corresponding to a particular image class as the system to be interpreted, and instructing MAIA to determine whether the actual distribution of images that receive high class scores matches the class label (see paper Appendix for full MAIA instructions).</p>
       </div>
       <figure style="display: flex; flex-direction: column; align-items: center; width: 100%;">
@@ -257,7 +257,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3">Validating MAIA explanations</h2>
-      <div class="content" style="text-align: left;">
+      <div class="content" style="text-align: justify;">
         <p>In addition to being useful for applications like spurious feature removal and bias detection, are MAIA descriptions <em>accurate</em>?</p>
 	<p>We evaluate MAIA on the neuron description paradigm, which appears as a subroutine of many interpretabiltiy procedures (e.g. <a href="https://arxiv.org/abs/1704.05796" target="_blank">Bau et al. 2017</a>, <a href="https://arxiv.org/abs/2201.11114" target="_blank">Hernandez et al. 2022</a>, <a href="https://arxiv.org/abs/2204.10965" target="_blank">Oikarenen & Weng 2022</a>, <a href="https://openaipublic.blob.core.windows.net/neuron-explainer/paper/index.html" target="_blank">Bills et al. 2023</a>), and offers common baselines for comparison.</p>
       </div>
