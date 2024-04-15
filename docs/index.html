@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="MAIA">
+        content="A Multimodal Automated Interpretability Agent that autonomously conducts experiments on other systems to explain their behavior.">
   <meta name="keywords" content="Interpretability, LLMs, Multimodal, Vision">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MAIA</title>
@@ -100,7 +100,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-              	<a href="https://github.com/multimodal-interpretability/FIND" 
+              	<a href="https://github.com/multimodal-interpretability/maia" 
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -211,21 +211,21 @@
       <h3 class="subtitle is-5" style="text-align: justify;">Visualizing Dataset Exemplars</h3>
       <p>MAIA uses the <code>dataset_exemplars</code> tool to compute images from the ImageNet dataset that maixmally activate a given system (in this case, an individual neuron). The <code>dataset_exemplars</code> tool returns masked versions of the images highlighting <i>image subregions</i> that maximally activate the neuron, as well as the activation value.</p><br>
       </div>
-      <div style="display: flex; justify-content: center; width: 100%;">
+      <div style="display: flex; justify-content: center; width: 100%; margin-top: 5px; margin-bottom:10px">
         <img src="./static/figures/dataset_exemplars.png" alt="Dataset Exemplars" style="width: 95%; height: auto;" />
       </div>
       <div class="content" style="text-align: justify;">
       <h3 class="subtitle is-5" style="text-align: justify;">Generating Synthetic Test Images</h3>
       <p>In addition to using real-world stimuli as inputs to the system it is trying to interpret, MAIA can generate additional synthetic inputs that test specific dimensions of a system's selectivity. MAIA uses the <code>text2image</code> function to call a pretrained text-guided diffusion model on prompts it writes. These prompts can test specific hypotheses about the neuron's selectivities, such as in the example of the tennis ball neuron below.</p><br>
       </div>
-      <div style="display: flex; justify-content: center; width: 100%; "margin-top: 5px;">
+      <div style="display: flex; justify-content: center; width: 100%; margin-top: 5px; margin-bottom:10px ">
         <img src="./static/figures/synthetic_exemplars.png" alt="Synthetic Exemplars" style="width: 95%; height: auto;" />
       </div>
       <div class="content" style="text-align: justify;">
       <h3 class="subtitle is-5" style="text-align: justify;">Image editing</h3>
       <p>MAIA can also call the <code>edit_images</code> tool which uses an text-based image editing module (Instruct Pix2Pix) to make image edits according to prompts written by MAIA. MAIA uses this tool to causally intervene on input space in order to test specific hypotheses about system behavior (e.g. whether the presence of a certain feature is required for the observed behavior!)</p><br>
       </div>
-      <div style="display: flex; justify-content: center; width: 100%; "margin-top: 5px;">
+      <div style="display: flex; justify-content: center; width: 100%; margin-top: 5px; margin-bottom:10px">
         <img src="./static/figures/editing_images.png" alt="Synthetic Exemplars" style="width: 95%; height: auto;" />
       </div>
 	    
