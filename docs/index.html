@@ -209,7 +209,7 @@
       </div>
       <div class="content" style="text-align: justify;">
       <h3 class="subtitle is-5" style="text-align: justify;">Visualizing Dataset Exemplars</h3>
-      <p>MAIA uses the <code>dataset_exemplars</code> tool to compute images from the ImageNet dataset that maixmally activate a given system (in this case, an individual neuron). The <code>dataset_exemplars</code> tool returns masked versions of the images highlighting <i>image subregions</i> that maximally activate the neuron, as well as the activation value.</p><br>
+      <p>MAIA uses the <code>dataset_exemplars</code> tool to compute images from the ImageNet dataset that maximally activate a given system (in this case, an individual neuron). The <code>dataset_exemplars</code> tool returns masked versions of the images highlighting <i>image subregions</i> that maximally activate the neuron, as well as the activation value.</p><br>
       </div>
       <div style="display: flex; justify-content: center; width: 100%; margin-top: -15px; margin-bottom:30px">
         <img src="./static/figures/dataset_exemplars.png" alt="Dataset Exemplars" style="width: 95%; height: auto;" />
@@ -238,7 +238,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3">Using MAIA to remove spurious features</h2>
-      <div class="content" style="text-align: justify; margin-bottom: -20px;">
+      <div class="content" style="text-align: justify">
         <p>Learned spurious features impose a challenge when machine learning models are applied in real-world scenarios, where test distributions can differ from training set statistics. We use MAIA to identify and remove learned spurious features inside a classification network (ResNet-18 trained on <a href="https://arxiv.org/abs/2303.05470" target="_blank">Spawrious</a>, a synthetically generated dataset involving four dog breeds with different backgrounds). In the train set, each dog breed is spuriously correlated with a certain background (e.g. snow, jungle, desert, beach) while in the test set, the breed-background pairings are scrambled. We use MAIA to find a subset of final layer neurons that robustly predict a single dog breed independently of spurious features, simply by changing the query in the user prompt (see paper for more experimental details). Below, see an example neuron that MAIA determines to be selective for spurious correlations between dog breed and background:</p>
       </div>
       <!-- <div style="display: flex; justify-content: center; width: 100%; margin-top:-40px; margin-bottom:-20px">
