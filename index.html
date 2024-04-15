@@ -217,19 +217,19 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3">Using MAIA to remove spurious features</h2>
-      <div class="content" style="text-align: left;">
+      <div class="content" style="text-align: justify;">
         <p>Learned spurious features impose a challenge when machine learning models are applied in real-world scenarios, where test distributions can differ from training set statistics. We use MAIA to identify and remove learned spurious features inside a classification network (ResNet-18 trained on <a href="https://arxiv.org/abs/2303.05470" target="_blank">Spawrious</a>, a synthetically generated dataset involving four dog breeds with different backgrounds). In the train set, each dog breed is spuriously correlated with a certain background (e.g. snow, jungle, desert, beach) while in the test set, the breed-background pairings are scrambled. We use MAIA to find a subset of final layer neurons that robustly predict a single dog breed independently of spurious features, simply by changing the query in the user prompt (see paper for more experimental details). Below, see an example neuron that MAIA determines to be selective for spurious correlations between dog breed and background:</p>
       </div>
       <div style="display: flex; justify-content: center; width: 100%;">
-        <img src="./static/figures/spurious_example.gif" alt="spurious example" style="width: 95%; height: auto;" />
+        <img src="./static/figures/spurious_example.gif" alt="spurious example" style="width: 95%; height: auto; margin-top: -15px; margin-bottom: 10px;" />
       </div>
-      <div class="content" style="text-align: left;">
+      <div class="content" style="text-align: justify;">
         <p>As well as another example neuron that MAIA determines to be selective for a single dog breed, independently of its background:</p>
       </div>
       <div style="display: flex; justify-content: center; width: 100%;">
-        <img src="./static/figures/selective_example.gif" alt="spurious example" style="width: 95%; height: auto;" />
+        <img src="./static/figures/selective_example.gif" alt="spurious example" style="width: 95%; height: auto; margin-top: -15px; margin-bottom: 10px;" />
       </div>
-      <div class="content" style="text-align: left;">
+      <div class="content" style="text-align: justify;">
         <p>We then use the features MAIA selects to train an unregularized logistic regression model on the unbalanced data. We find that with no access to unbiased examples, MAIA can identify and remove spurious features, improving model robustness under distribution shift by a wide margin, with an accuracy approaching that of fine-tuning on balanced data (see Section 5.1 of the paper for more results). </p>
       </div>	    
     </div>
