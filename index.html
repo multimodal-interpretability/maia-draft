@@ -26,6 +26,21 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <style>
+    @media screen and (max-width: 768px) {
+      .image-text-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .image-text-container img {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -146,7 +161,7 @@
     <div class="columns is-centered">
       <div class="content">
         <h2 class="title is-3 has-text-centered">MAIA</h2>
-        <div style="display: flex; align-items: center;">
+        <div class="content image-text-container" style="display: flex; align-items: center;">
           <img src="./static/figures/MAIA_schematic.png" alt="MAIA Schematic" style="margin-right: 20px; width: 40%;">
           <p style="text-align: justify;">
             We introduce MAIA, a Multimodal Automated Interpretability Agent. MAIA is a system that uses neural models to automate neural model understanding tasks like feature interpretation and failure mode discovery.
@@ -238,7 +253,7 @@
         <p>In addition to being useful for applications like spurious feature removal and bias detection, are MAIA descriptions <em>accurate</em>?</p>
 	<p>We evaluate MAIA on the neuron description paradigm, which appears as a subroutine of many interpretabiltiy procedures (e.g. <a href="https://arxiv.org/abs/1704.05796" target="_blank">Bau et al. 2017</a>, <a href="https://arxiv.org/abs/2201.11114" target="_blank">Hernandez et al. 2022</a>, <a href="https://arxiv.org/abs/2204.10965" target="_blank">Oikarenen & Weng 2022</a>, <a href="https://openaipublic.blob.core.windows.net/neuron-explainer/paper/index.html" target="_blank">Bills et al. 2023</a>), and offers common baselines for comparison.</p>
       </div>
-	<div style="display: flex; align-items: center;">
+	<div class="content image-text-container" style="display: flex; align-items: center;">
           <img src="./static/figures/synthetic_schematic.png" alt="Synthetic Neurons" style="margin-right: 15px; width: 50%;">
           <p style="text-align: justify;">
             We introduce MAIA, a Multimodal Automated Interpretability Agent. MAIA is a system that uses neural models to automate neural model understanding tasks like feature interpretation and failure mode discovery.
