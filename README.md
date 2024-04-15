@@ -1,1 +1,1 @@
-MAIA website
+MAIA
