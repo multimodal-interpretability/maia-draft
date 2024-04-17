@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 .layer-container {
     display: inline-block; /* Allow the container to fit content width */
     position: relative; /* For positioning the layer title absolutely */
-    margin: 0px 10px; /* Space around each layer container */
+    margin: 0px 70px; /* Space around each layer container */
 }
 
 /* Style for the layer title */
@@ -109,6 +109,7 @@ h1, h2, h3, h4, h5, h6 {
     /* position: absolute; */
     top: 10%;
     left: 10%;
+    right: 10%;
     overflow-y: auto;
     max-height: 100vh;
     max-width: 200vh;
@@ -129,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 .close-button {
     position: fixed;
     top: 11%;
-    right: 14%;
+    right: 12%;
     border: none;
     background: #ffffffcb;
     color: #f39f32;
@@ -137,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 2em;
     z-index: 9999; /* High value to ensure it's on top */
     ;
 }
@@ -426,8 +427,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 hr {
-    width: 80%; /* Sets the width of the <hr> to 80% of its container's width */
-    margin: 20px auto; /* Centers the <hr> horizontally and adds vertical spacing */
+    width: 60%; /* Sets the width of the <hr> to 80% of its container's width */
+    margin: 30px auto; /* Centers the <hr> horizontally and adds vertical spacing */
     border: none; /* Removes the default border */
     height: 1px; /* Sets the thickness of the line */
     background-color: #a3a3a3; /* Sets the color of the line */
