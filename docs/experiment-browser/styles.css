@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 .layer-container {
     display: inline-block; /* Allow the container to fit content width */
     position: relative; /* For positioning the layer title absolutely */
-    margin: 0px 70px; /* Space around each layer container */
+    margin: 0px 150px; /* Space around each layer container */
 }
 
 /* Style for the layer title */
@@ -340,6 +340,14 @@ h1, h2, h3, h4, h5, h6 {
     font-style: italic; /* Optional styling */
 }
 
+.task {
+    text-align: center;
+    /* margin-top: 20px; Adjust spacing as needed */
+    font-style: italic; /* Optional styling */
+    padding: 0px 120px
+    /* width: 75% */
+}
+
 .collapsible-content {
     padding: 20px;
     overflow: hidden; /* Hide content initially */
@@ -449,6 +457,7 @@ hr {
   }
   
   .typewriter-line {
+    text-align: justify;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;

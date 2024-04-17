@@ -2,6 +2,9 @@
 function populateModelDropdown(models) {
     const modelDropdown = document.getElementById('modelDropdown');
     modelDropdown.innerHTML = ''; // Clear existing options
+    generateTaskDescription(models[0])
+    // const taskDescription = document.getElementById("taskDescription");
+    // taskDescription.innerHTML = ''
 
     models.forEach((model, index) => {
         let option = new Option(model.name, index);
@@ -9,11 +12,27 @@ function populateModelDropdown(models) {
     });
 
     modelDropdown.addEventListener('change', (event) => {
+        taskDescription.innerHTML = ''
         generateHTMLFromJSON(models[event.target.value]);
-        
+        generateTaskDescription(models[event.target.value])
     });
     // document.getElementById('modelDropdown').textContent = model.name;
 
+}
+
+function generateTaskDescription(model){
+    const taskDescription = document.getElementById("taskDescription");
+    const description = document.createElement("div");
+    description.className = "task";
+    if(model.name.includes('Bias')){
+        description.innerHTML = `In this task, MAIA is prompted to investigate biases in the outputs of a classifier (ResNet-152) trained on ImageNet classification.`;
+    } else if(model.name.includes('Spurious')){
+        description.innerHTML = `In this task, MAIA is prompted to identify which neurons are sensitive to spurious features in a ResNet-18 classifier trained to identify dog breeds in different environments.`;
+    } else {
+        description.innerHTML = `In this task, MAIA is prompted to describe neuron-level behavior inside several pre-trained vision models.`
+        
+    }
+    taskDescription.appendChild(description);
 }
 
 function createCodeBlock(codeText) {
@@ -445,7 +464,7 @@ function createCollapsibleBlock(Title,content,blockInit) {
 }
 
 function createCollapsibleExperimentBlock(Title,experiment,model_name) {
-    if(model_name.includes('Biases')){
+    if(model_name.includes('Bias')){
         userQuery1 = 'You will get an access to a neuron inside a deep neural network that is sensitive to the presence of a specific object class inside the input image. Your overall task is to reveal biases in the neuron\'s behavior. That is, your task is to find specific contexts or settings in which the neuron tends to have relatively higher activation values, but only covers partial asspect of the class, or specific scenarios when the neuron tends to have relatively lower activations although an object from the correct class is still present. Try to look for different type of biases (e.g. gender, ethnicity, context-dependencies, breed-dependencies, etc.). To do that you are provided with a library of Python functions to run experiments on the specific neuron (inside the "System" class) given the functions provided in the "Tools" class. Make sure to use a variety of tools from the library to maximize your experimentation power.'
         userQuery2 = `
         At each experiment step, write Python code that will conduct your experiment on the tested neuron, using the following format:
@@ -605,10 +624,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const typewriterText = `Hi! I'm MAIA (a Multimodal Automated Interpretability Agent). I 
-ran experiments on features inside a variety of vision models to 
-solve interpretability tasks. Hover over each unit to see the label 
-I gave it, and click on the unit to see my full experiment.`;
+const typewriterText = `Hi! I'm MAIA (a Multimodal Automated Interpretability Agent). I
+ran experiments on features inside a variety of vision models to
+answer interpretability queries. Hover over each unit to see its 
+label, and click on the unit to see my full experiment.
+
+Loading all experiments...`;
+
 
 const typewriterContainer = document.getElementById('typewriter');
 const typingSpeed = 1; // Duration of the typing animation for each line in seconds
