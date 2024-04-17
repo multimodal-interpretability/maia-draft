@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="MAIA">
+        content="A Multimodal Automated Interpretability Agent that autonomously conducts experiments on other systems to explain their behavior.">
   <meta name="keywords" content="Interpretability, LLMs, Multimodal, Vision">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MAIA</title>
@@ -100,7 +100,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-              	<a href="https://github.com/multimodal-interpretability/FIND" 
+              	<a href="https://github.com/multimodal-interpretability/maia" 
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -141,7 +141,8 @@
         <!-- <div style="display: flex; justify-content: center; width: 100%;">
             <img src="./static/figures/tench_gif.gif" style="width: 95%; height: auto;" />
         </div> -->
-        <video width="1280" height="480" autoplay muted controls loop>
+<!--         <video width="1280" height="480" autoplay muted controls loop> -->
+        <video autoplay muted controls loop style="width: 100%;">
           <source src="static/figures/tench_movie.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -159,7 +160,7 @@
 		<p>Understanding a neural model can take many forms. For instance, we might want to know when and how the system relies on sensitive or spurious features, identify systematic errors in its predictions, or learn how to modify the training data and model architecture to improve accuracy and robustness. Today, answering these types of questions often involves significant human effort—researchers must formalize their question, formulate hypotheses about a model’s decision-making process, design datasets on which to evaluate model behavior, then use these datasets to refine and validate hypotheses. As a result, this type of understanding is slow and expensive to obtain, even about the most widely used models.</p><br>
 		<p>Automated Interpretability approaches have begun to address the issue of scale. Recently, such approaches have used pretrained language models like GPT-4 (in <a href="https://openaipublic.blob.core.windows.net/neuron-explainer/paper/index.html" target="_blank">Bills et al. 2023</a>) or Claude (in <a href="https://transformer-circuits.pub/2023/monosemantic-features" target="_blank">Bricken et al. 2023</a>) to generate feature explanations. In earlier work, we introduced MILAN (<a href="https://arxiv.org/abs/2201.11114" target="_blank">Hernandez et al. 2022</a>), a captioner model trained on human feature annotations that takes as input a feature visualization and outputs a description of that feature. But automated approaches that use learned models to label features leave something to be desired: they are primarily tools for one-shot hypothesis generation (<a href="https://arxiv.org/abs/2309.10312" target="_blank">Huang et al. 2023</a>) rather than causal explanation, they characterize behavior on a limited set of inputs, and they are often low precision.</p><br>
 		<!-- <p>Our current line of research aims to build tools that help users understand models, while combining the flexibility of human experimentation with the scalability of automated techniques. In <a href="https://arxiv.org/abs/2309.03886" target="_blank">Schwettmann et al. 2023</a>, we introduced the <em>Automated Interpretability Agent</em> (AIA) paradigm, where an LM-based agent interactively probes systems to explain their behavior. We now introduce a multimodal AIA, with a vision-language model backbone and an API of tools for designing experiments on other systems. With simple modifications to the user query to the agent, the same modular system can field both "macroscopic" questions like identifying systematic biases in model predictions (see the tench example above), as well as "microscopic" questions like describing individual features (see example below).</p><br> -->
-		<p>We introduce the <b>M</b>ultimodal <b>A</b>utomated <b>I</b>nterpretability <b>A</b>gent (MAIA), aiming to help users understand models. MAIA combines the scalability of automated techniques with the flexibility of human experimentation—It iteratively generates hypotheses, runs experiments that test these hypotheses, observes experimental outcomes, and updates hypotheses until it can answer the user query. MAIA is based on the recent success of our <em>Automated Interpretability Agent</em> (AIA) paradigm (<a href="https://arxiv.org/abs/2309.03886" target="_blank">Schwettmann et al. 2023</a>) where an LM-based agent interactively probes systems to explain their behavior. We expand this by equipping MAIA with a vision-language model backbone and an API of tools for designing experiments on other systems [add a link to the webpage section describing the tools]. With simple modifications to the user query to the agent, the same modular system can field both "macroscopic" questions like identifying systematic biases in model predictions (see the tench example above), as well as "microscopic" questions like describing individual features (see example below).</p><br>
+		<p>Our current line of research aims to build tools that help users understand models, while combining the flexibility of human experimentation with the scalability of automated techniques. We introduce the <b>M</b>ultimodal <b>A</b>utomated <b>I</b>nterpretability <b>A</b>gent (MAIA), which designs experiments to answer user queries about components of AI systems. MAIA iteratively generates hypotheses, runs experiments that test these hypotheses, observes experimental outcomes, and updates hypotheses until it can answer the user query. MAIA builds on the <em>Automated Interpretability Agent</em> (AIA) paradigm we introduced in <a href="https://arxiv.org/abs/2309.03886" target="_blank">Schwettmann et al. 2023</a>, where an LM-based agent interactively probes systems to explain their behavior. MAIA is equipped with a vision-language model backbone and an API of <a href="#tools-description">tools</a> for designing interpretability experiments. With simple modifications to the user query to the agent, the same modular system can field both "macroscopic" questions like identifying systematic biases in model predictions (see the tench example above), as well as "microscopic" questions like describing individual features (see example below).</p><br>
 	</div>
     </div>
 </section>
@@ -170,7 +171,7 @@
         <!-- <div style="display: flex; justify-content: center; width: 100%;">
             <img src="./static/figures/bowtie_gif.gif" style="width: 95%; height: auto;" />
         </div> -->
-        <video width="1280" height="480" autoplay muted controls loop>
+        <video autoplay muted controls loop style="width: 100%;">
           <source src="static/figures/bowtie_movie.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -187,7 +188,7 @@
         <div class="content image-text-container" style="display: flex; align-items: center;">
           <img src="./static/figures/MAIA_schematic.png" alt="MAIA Schematic" style="margin-right: 20px; width: 40%;">
           <p style="text-align: justify;">
-            We introduce MAIA, a Multimodal Automated Interpretability Agent. MAIA is a system that uses neural models to automate neural model understanding tasks like feature interpretation and failure mode discovery.
+            MAIA is a system that uses neural models to automate neural model understanding tasks like feature interpretation and failure mode discovery.
             It equips a pre-trained vision-language model with a set of tools that support iterative experimentation on subcomponents of other models to explain their behavior. These include tools commonly used by human interpretability researchers: for synthesizing and editing inputs, computing maximally activating exemplars from real-world datasets, and summarizing and describing experimental results.
             <i>Interpretability experiments</i> proposed by MAIA compose these tools to describe and explain system behavior.
           </p>
@@ -200,7 +201,7 @@
 </section>
 
 
-<section class="hero teaser" style="margin-top: -5px;">
+<section id="tools-description" class="hero teaser" style="margin-top: -5px;">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3">MAIA uses tools to design experiments on other systems</h2>
@@ -209,23 +210,23 @@
       </div>
       <div class="content" style="text-align: justify;">
       <h3 class="subtitle is-5" style="text-align: justify;">Visualizing Dataset Exemplars</h3>
-      <p>MAIA uses the <code>dataset_exemplars</code> tool to compute images from the ImageNet dataset that maixmally activate a given system (in this case, an individual neuron). The <code>dataset_exemplars</code> tool returns masked versions of the images highlighting <i>image subregions</i> that maximally activate the neuron, as well as the activation value.</p><br>
+      <p>MAIA uses the <code>dataset_exemplars</code> tool to compute images from the ImageNet dataset that maximally activate a given system (in this case, an individual neuron). The <code>dataset_exemplars</code> tool returns masked versions of the images highlighting <i>image subregions</i> that maximally activate the neuron, as well as the activation value.</p><br>
       </div>
-      <div style="display: flex; justify-content: center; width: 100%;">
+      <div style="display: flex; justify-content: center; width: 100%; margin-top: -15px; margin-bottom:30px">
         <img src="./static/figures/dataset_exemplars.png" alt="Dataset Exemplars" style="width: 95%; height: auto;" />
       </div>
       <div class="content" style="text-align: justify;">
       <h3 class="subtitle is-5" style="text-align: justify;">Generating Synthetic Test Images</h3>
       <p>In addition to using real-world stimuli as inputs to the system it is trying to interpret, MAIA can generate additional synthetic inputs that test specific dimensions of a system's selectivity. MAIA uses the <code>text2image</code> function to call a pretrained text-guided diffusion model on prompts it writes. These prompts can test specific hypotheses about the neuron's selectivities, such as in the example of the tennis ball neuron below.</p><br>
       </div>
-      <div style="display: flex; justify-content: center; width: 100%; "margin-top: 5px;">
+      <div style="display: flex; justify-content: center; width: 100%; margin-top: -15px; margin-bottom:30px ">
         <img src="./static/figures/synthetic_exemplars.png" alt="Synthetic Exemplars" style="width: 95%; height: auto;" />
       </div>
       <div class="content" style="text-align: justify;">
       <h3 class="subtitle is-5" style="text-align: justify;">Image editing</h3>
       <p>MAIA can also call the <code>edit_images</code> tool which uses an text-based image editing module (Instruct Pix2Pix) to make image edits according to prompts written by MAIA. MAIA uses this tool to causally intervene on input space in order to test specific hypotheses about system behavior (e.g. whether the presence of a certain feature is required for the observed behavior!)</p><br>
       </div>
-      <div style="display: flex; justify-content: center; width: 100%; "margin-top: 5px;">
+      <div style="display: flex; justify-content: center; width: 100%; margin-top: -15px; margin-bottom:-35px">
         <img src="./static/figures/editing_images.png" alt="Synthetic Exemplars" style="width: 95%; height: auto;" />
       </div>
 	    
@@ -238,13 +239,13 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3">Using MAIA to remove spurious features</h2>
-      <div class="content" style="text-align: justify; margin-bottom: -20px;">
+      <div class="content" style="text-align: justify">
         <p>Learned spurious features impose a challenge when machine learning models are applied in real-world scenarios, where test distributions can differ from training set statistics. We use MAIA to identify and remove learned spurious features inside a classification network (ResNet-18 trained on <a href="https://arxiv.org/abs/2303.05470" target="_blank">Spawrious</a>, a synthetically generated dataset involving four dog breeds with different backgrounds). In the train set, each dog breed is spuriously correlated with a certain background (e.g. snow, jungle, desert, beach) while in the test set, the breed-background pairings are scrambled. We use MAIA to find a subset of final layer neurons that robustly predict a single dog breed independently of spurious features, simply by changing the query in the user prompt (see paper for more experimental details). Below, see an example neuron that MAIA determines to be selective for spurious correlations between dog breed and background:</p>
       </div>
       <!-- <div style="display: flex; justify-content: center; width: 100%; margin-top:-40px; margin-bottom:-20px">
         <img src="./static/figures/spurious_example.gif" alt="spurious example" style="width: 95%; height: auto; margin-top: -15px; margin-bottom: 10px;" />
       </div> -->
-      <video width="1280" height="480" autoplay muted controls loop>
+      <video autoplay muted controls loop style="width: 100%;">
         <source src="static/figures/spurious_example.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -254,7 +255,7 @@
       <!-- <div style="display: flex; justify-content: center; width: 100%; margin-top:-20px; margin-bottom:-20px">
         <img src="./static/figures/selective_example.gif" alt="spurious example" style="width: 95%; height: auto; margin-top: -5px; margin-bottom: 10px;" />
       </div> -->
-      <video width="1280" height="480" autoplay muted controls loop>
+      <video autoplay muted controls loop style="width: 100%;">
         <source src="static/figures/selective_example.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
