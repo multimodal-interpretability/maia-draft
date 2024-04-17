@@ -4,8 +4,7 @@
 
 ### [Project Page](https://multimodal-interpretability.csail.mit.edu/maia) | [Arxiv](https://multimodal-interpretability.csail.mit.edu/maia)
 
-[Tamar Rott Shaham](https://tamarott.github.io/)\\\, [Sarah Schwettmannn](https://cogconfluence.com/)\\\, <br>
-
+[Tamar Rott Shaham](https://tamarott.github.io/)\*, [Sarah Schwettmannn](https://cogconfluence.com/)\*, <br>
 [Franklin Wang](https://frankxwang.github.io/), [Achyuta Rajaram](https://twitter.com/AchyutaBot), [Evan Hernandez](https://evandez.com/), [Jacob Andreas](https://www.mit.edu/~jda/), [Antonio Torralba](https://groups.csail.mit.edu/vision/torralbalab/) <br>
 
 \*equal contribution <br><br>
