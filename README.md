@@ -1,8 +1,8 @@
 # A Multimodal Automated Interpretability Agent #
 
-<img align="right" width="40%" src="/docs/static/figures/maia_teaser.jpg">
-
 ### [Project Page](https://multimodal-interpretability.csail.mit.edu/maia) | [Arxiv](https://multimodal-interpretability.csail.mit.edu/maia)
+
+<img align="right" width="40%" src="/docs/static/figures/maia_teaser.jpg">
 
 [Tamar Rott Shaham](https://tamarott.github.io/)\*, [Sarah Schwettmannn](https://cogconfluence.com/)\*, <br>
 [Franklin Wang](https://frankxwang.github.io/), [Achyuta Rajaram](https://twitter.com/AchyutaBot), [Evan Hernandez](https://evandez.com/), [Jacob Andreas](https://www.mit.edu/~jda/), [Antonio Torralba](https://groups.csail.mit.edu/vision/torralbalab/) <br>
