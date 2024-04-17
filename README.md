@@ -4,9 +4,8 @@
 
 <img align="right" width="40%" src="/docs/static/figures/maia_teaser.jpg">
 
-[Tamar Rott Shaham](https://tamarott.github.io/)\*, [Sarah Schwettmannn](https://cogconfluence.com/)\*, <br>
+[Tamar Rott Shaham](https://tamarott.github.io/)\*, [Sarah Schwettmann](https://cogconfluence.com/)\*, <br>
 [Franklin Wang](https://frankxwang.github.io/), [Achyuta Rajaram](https://twitter.com/AchyutaBot), [Evan Hernandez](https://evandez.com/), [Jacob Andreas](https://www.mit.edu/~jda/), [Antonio Torralba](https://groups.csail.mit.edu/vision/torralbalab/) <br>
-
 \*equal contribution <br><br>
 **This repo is under active development, and the MAIA codebase will be released in the coming weeks. Sign up for updates by email using [this google form](https://forms.gle/Zs92DHbs3Y3QGjXG6).**
 
