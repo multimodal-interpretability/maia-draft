@@ -396,7 +396,7 @@ function createCollapsibleCodeBlock(codeText) {
     toggleIcon.className = "collapsible-toggle";
 
     const titleSpan = document.createElement("span");
-    titleSpan.textContent = "def execute_command(system, tools):"; 
+    titleSpan.textContent = "def run_experiment(system, tools):"; 
     // The text "Code" next to the toggle
 
     // Add an onclick event to the header for toggling the code block's visibility
