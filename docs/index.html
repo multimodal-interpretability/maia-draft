@@ -28,6 +28,11 @@
   <script src="./static/js/index.js"></script>
 
   <style>
+  .title-text {
+	  display: inline-block;
+	  word-break: break-word;
+	  hyphens: auto;
+   }
     @media screen and (max-width: 768px) {
       .image-text-container {
         flex-direction: column;
@@ -41,6 +46,9 @@
         max-width: 100%;
         height: auto;
       }
+      .title-text {  
+	font-size: 2rem;
+      }
     } 
   </style>
 </head>
@@ -51,7 +59,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">A Multimodal Automated Interpretability Agent</h1>
+          <h1 class="title is-1 publication-title"><div class="title-text">A Multimodal Automated Interpretability Agent</div></h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://tamarott.github.io/">Tamar Rott Shaham</a><sup>*</sup>,</span>
